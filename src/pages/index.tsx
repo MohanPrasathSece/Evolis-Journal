@@ -10,59 +10,59 @@ import heroImage from "@/assets/hero.jpg";
 import authorImage from "@/assets/author.jpg";
 
 const utilityLinks = [
-  ["Markets", "/markets"], ["Technology", "/technology"], ["Blockchain", "/blockchain"],
-  ["AI", "/ai"], ["Economy", "/economy"], ["Research", "/research"],
-  ["Opinion", "/opinion"], ["Newsletter", "/newsletter"], ["Videos", "/videos"],
-  ["Podcasts", "/podcasts"], ["Events", "/events"], ["About", "/about"], ["Contact", "/contact"],
-  ["Careers", "/careers"], ["Press Room", "/press"], ["Global Policy", "/policy"], ["Data Terminals", "/data"],
+  ["Marchés", "/markets"], ["Technologie", "/technology"], ["Blockchain", "/blockchain"],
+  ["IA", "/ai"], ["Économie", "/economy"], ["Recherche", "/research"],
+  ["Opinion", "/opinion"], ["Newsletter", "/newsletter"], ["Vidéos", "/videos"],
+  ["Podcasts", "/podcasts"], ["Événements", "/events"], ["À propos", "/about"], ["Contact", "/contact"],
+  ["Carrières", "/careers"], ["Salle de presse", "/press"], ["Politique globale", "/policy"], ["Terminaux de données", "/data"],
 ];
 
 const mainNav = [
-  "Latest", "Featured", "Analysis", "Digital Assets", "Fintech",
-  "Cybersecurity", "Global Markets", "Startups", "Innovation", "Education",
-  "DeFi Pulse", "Tokenomics", "Regulation Desk", "RWA Hub", "Venture Capital",
+  "Dernier", "À la une", "Analyses", "Actifs numériques", "Fintech",
+  "Cybersécurité", "Marchés mondiaux", "Startups", "Innovation", "Éducation",
+  "Pouls DeFi", "Tokenomics", "Bureau de régulation", "Pôle RWA", "Capital-risque",
 ];
 
 const tickerItems = [
-  "Institutional adoption continues to expand",
-  "AI tools reshape financial research",
-  "Digital asset regulation evolves globally",
-  "Blockchain innovation accelerates",
-  "Fintech investment remains strong",
+  "L'adoption institutionnelle continue de s'étendre",
+  "Les outils d'IA redéfinissent la recherche financière",
+  "La régulation des actifs numériques évolue mondialement",
+  "L'innovation blockchain s'accélère",
+  "L'investissement dans la fintech reste soutenu",
 ];
 
 const sections = [
   { id: "intro", title: "Introduction" },
-  { id: "evolution", title: "The Evolution of Digital Finance" },
-  { id: "blockchain", title: "Blockchain Technology Explained" },
-  { id: "ai-research", title: "AI in Financial Research" },
-  { id: "volatility", title: "Market Volatility" },
-  { id: "risk", title: "Risk Management" },
-  { id: "institutional", title: "Institutional Adoption" },
-  { id: "security", title: "Security Considerations" },
-  { id: "future", title: "Future Trends" },
+  { id: "evolution", title: "L'évolution de la finance numérique" },
+  { id: "blockchain", title: "La technologie blockchain expliquée" },
+  { id: "ai-research", title: "L'IA dans la recherche financière" },
+  { id: "volatility", title: "Volatilité du marché" },
+  { id: "risk", title: "Gestion des risques" },
+  { id: "institutional", title: "Adoption institutionnelle" },
+  { id: "security", title: "Considérations de sécurité" },
+  { id: "future", title: "Tendances futures" },
   { id: "conclusion", title: "Conclusion" },
 ];
 
 const relatedArticles = [
-  { cat: "Blockchain", title: "Layer-2 Networks and the New Cost of Settlement", summary: "Throughput gains are reshaping fee markets across the ecosystem.", author: "M. Tanaka", date: "Jun 12, 2026", read: "9 min" },
-  { cat: "AI", title: "Where Generative Models Are Outperforming Analysts", summary: "A measured look at productivity gains and remaining blind spots.", author: "R. Patel", date: "Jun 10, 2026", read: "11 min" },
-  { cat: "Markets", title: "Why Liquidity Quietly Moved On-Chain in Q2", summary: "Trading desks describe a structural shift in venue selection.", author: "S. Lindqvist", date: "Jun 09, 2026", read: "8 min" },
-  { cat: "Fintech", title: "Embedded Finance Crosses Into Industrial Software", summary: "B2B platforms quietly become the next distribution layer.", author: "D. Okafor", date: "Jun 08, 2026", read: "7 min" },
-  { cat: "Research", title: "What 14 Central Banks Said About Tokenization", summary: "A comparative reading of recent monetary authority papers.", author: "E. Rossi", date: "Jun 07, 2026", read: "12 min" },
-  { cat: "Cybersecurity", title: "Hardware Wallets, MPC, and the New Custody Stack", summary: "Custody is no longer a single decision but a layered architecture.", author: "A. Volkov", date: "Jun 05, 2026", read: "10 min" },
-  { cat: "Economy", title: "The Quiet Repricing of Real-World Assets", summary: "Tokenized treasuries reveal a maturing market structure.", author: "C. Bianchi", date: "Jun 04, 2026", read: "9 min" },
-  { cat: "Opinion", title: "Editorial: Disclosure Standards Must Catch Up", summary: "A call for clearer reporting in algorithmic asset management.", author: "L. Chen", date: "Jun 02, 2026", read: "6 min" },
-  { cat: "Startups", title: "Where Pre-Seed Capital Is Flowing in Digital Finance", summary: "An analysis of 312 funded rounds over the past quarter.", author: "J. Park", date: "Jun 01, 2026", read: "8 min" },
-  { cat: "Innovation", title: "Zero-Knowledge Proofs Move From Theory to Product", summary: "A look at the first production-grade implementations.", author: "N. Haddad", date: "May 29, 2026", read: "13 min" },
-  { cat: "Education", title: "A Reader's Guide to On-Chain Analytics", summary: "Reading flows, holders, and supply curves without the noise.", author: "P. Müller", date: "May 27, 2026", read: "10 min" },
-  { cat: "Global Markets", title: "Asia's Quiet Lead in Regulated Stablecoins", summary: "Three jurisdictions, three frameworks, one direction of travel.", author: "K. Sato", date: "May 25, 2026", read: "11 min" },
+  { cat: "Blockchain", title: "Réseaux Layer-2 et nouveau coût de règlement", summary: "Les gains de débit remodèlent les marchés de frais à travers l'écosystème.", author: "M. Tanaka", date: "12 juin 2026", read: "9 min" },
+  { cat: "IA", title: "Où les modèles génératifs surpassent les analystes", summary: "Un regard mesuré sur les gains de productivité et les zones d'ombre subsistantes.", author: "R. Patel", date: "10 juin 2026", read: "11 min" },
+  { cat: "Marchés", title: "Pourquoi la liquidité s'est déplacée on-chain au T2", summary: "Les bureaux de négociation décrivent un changement structurel de plateforme.", author: "S. Lindqvist", date: "09 juin 2026", read: "8 min" },
+  { cat: "Fintech", title: "La finance intégrée s'invite dans les logiciels industriels", summary: "Les plateformes B2B deviennent discrètement la prochaine couche de distribution.", author: "D. Okafor", date: "08 juin 2026", read: "7 min" },
+  { cat: "Recherche", title: "Ce que 14 banques centrales ont dit sur la tokenisation", summary: "Une lecture comparative des récents rapports des autorités monétaires.", author: "E. Rossi", date: "07 juin 2026", read: "12 min" },
+  { cat: "Cybersécurité", title: "Portefeuilles matériels, MPC et nouvelle gestion de garde", summary: "La garde n'est plus une décision unique mais une architecture multicouche.", author: "A. Volkov", date: "05 juin 2026", read: "10 min" },
+  { cat: "Économie", title: "La réévaluation discrète des actifs réels", summary: "Les bons du Trésor tokenisés révèlent une structure de marché mature.", author: "C. Bianchi", date: "04 juin 2026", read: "9 min" },
+  { cat: "Opinion", title: "Éditorial : Les normes de divulgation doivent rattraper leur retard", summary: "Un appel à des rapports plus clairs dans la gestion d'actifs algorithmique.", author: "L. Chen", date: "02 juin 2026", read: "6 min" },
+  { cat: "Startups", title: "Où va le capital pré-amorçage dans la finance numérique", summary: "Une analyse de 312 tours de table financés au cours du dernier trimestre.", author: "J. Park", date: "01 juin 2026", read: "8 min" },
+  { cat: "Innovation", title: "Les preuves à divulgation nulle passent de la théorie au produit", summary: "Un aperçu des premières implémentations de niveau production.", author: "N. Haddad", date: "29 mai 2026", read: "13 min" },
+  { cat: "Éducation", title: "Guide de l'analyse on-chain pour le lecteur", summary: "Comprendre les flux, les détenteurs et les courbes d'offre sans bruit parasite.", author: "P. Müller", date: "27 mai 2026", read: "10 min" },
+  { cat: "Marchés mondiaux", title: "L'avance discrète de l'Asie sur les stablecoins régulés", summary: "Trois juridictions, trois cadres, une seule direction commune.", author: "K. Sato", date: "25 mai 2026", read: "11 min" },
 ];
 
 const comments = [
-  { name: "Helena Marsh", time: "2 hours ago", text: "Useful framing on risk management. The distinction between model risk and market risk is too often collapsed in coverage like this." },
-  { name: "Daniel Ortiz", time: "5 hours ago", text: "Would love a follow-up specifically on how institutional desks are integrating AI signals with traditional quant workflows." },
-  { name: "Yuki Nakamura", time: "Yesterday", text: "The section on tokenization echoes what we're seeing at the desk level. Settlement times are the real story." },
+  { name: "Helena Marsh", time: "Il y a 2 heures", text: "Cadrage utile sur la gestion des risques. La distinction entre le risque de modèle et le risque de marché est trop souvent éludée dans les reportages de ce genre." },
+  { name: "Daniel Ortiz", time: "Il y a 5 heures", text: "J'aimerais beaucoup un suivi sur la manière dont les pupitres institutionnels intègrent les signaux de l'IA avec les flux quantitatifs traditionnels." },
+  { name: "Yuki Nakamura", time: "Hier", text: "La section sur la tokenisation fait écho à ce que nous voyons sur le terrain. Les délais de règlement sont la vraie nouveauté." },
 ];
 
 const cardImages = [
@@ -123,9 +123,9 @@ export default function IndexPage() {
               ))}
             </nav>
             <div className="flex items-center gap-4 ml-auto">
-              <a href="/article" className="flex items-center gap-1 hover:text-[var(--color-ink)]"><Search className="h-3.5 w-3.5"/>Search</a>
-              <a href="/article" className="hover:text-[var(--color-ink)]">Login</a>
-              <a href="/article" className="rounded-full bg-[var(--color-ink)] px-3 py-1.5 text-[10px] font-semibold tracking-[0.16em] text-[var(--color-paper)] hover:bg-[var(--color-accent-red)] transition-colors">Subscribe</a>
+              <a href="/article" className="flex items-center gap-1 hover:text-[var(--color-ink)]"><Search className="h-3.5 w-3.5"/>Rechercher</a>
+              <a href="/article" className="hover:text-[var(--color-ink)]">Connexion</a>
+              <a href="/article" className="rounded-full bg-[var(--color-ink)] px-3 py-1.5 text-[10px] font-semibold tracking-[0.16em] text-[var(--color-paper)] hover:bg-[var(--color-accent-red)] transition-colors">S'abonner</a>
             </div>
           </div>
         </div>
@@ -133,19 +133,19 @@ export default function IndexPage() {
         <div className="mx-auto max-w-[1400px] px-4 py-5 sm:py-6 lg:px-8">
           <div className="grid items-center gap-4 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">
             <div className="hidden text-xs uppercase tracking-[0.18em] text-neutral-500 md:block">
-              <div>Wednesday, June 17, 2026</div>
-              <div className="mt-1">Vol. XII · Issue 24</div>
+              <div>Mercredi 17 juin 2026</div>
+              <div className="mt-1">Vol. XII · Numéro 24</div>
             </div>
             <a href="/" className="text-center">
               <div className="font-[var(--font-serif)] text-2xl font-black leading-none tracking-tight sm:text-3xl md:text-5xl">
                 Évolis <span className="italic font-light">Journal</span>
               </div>
               <div className="mt-2 text-[9px] uppercase tracking-[0.28em] text-neutral-500 sm:text-[10px] sm:tracking-[0.32em]">
-                Independent Analysis · Digital Finance · Market Research
+                Analyses indépendantes · Finance numérique · Recherche sur les marchés
               </div>
             </a>
             <div className="hidden justify-end text-xs uppercase tracking-[0.18em] text-neutral-500 md:flex md:flex-col md:items-end">
-              <a href="/article" className="flex items-center gap-2"><span className="inline-block h-1.5 w-1.5 rounded-full bg-[var(--color-positive)] animate-pulse" />Markets Open</a>
+              <a href="/article" className="flex items-center gap-2"><span className="inline-block h-1.5 w-1.5 rounded-full bg-[var(--color-positive)] animate-pulse" />Marchés Ouverts</a>
               <div className="mt-1">BTC 68,420 · ETH 3,812</div>
             </div>
           </div>
@@ -161,7 +161,7 @@ export default function IndexPage() {
 
         <div className="flex items-stretch border-t border-[var(--color-rule)] bg-[var(--color-ink)] text-[var(--color-paper)]">
           <div className="flex shrink-0 items-center gap-2 bg-[var(--color-accent-red)] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.2em]">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-white animate-pulse"/> Breaking
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-white animate-pulse"/> Flash
           </div>
           <div className="relative flex-1 overflow-hidden">
             <div className="ticker-track flex w-max gap-12 whitespace-nowrap py-2 text-sm">
@@ -176,36 +176,36 @@ export default function IndexPage() {
       <section className="mx-auto max-w-[1400px] px-4 pt-8 sm:px-6 sm:pt-10 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-end">
           <div className="section-rise">
-            <a href="/article" className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent-red)]">Digital Finance</a>
+            <a href="/article" className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent-red)]">Finance numérique</a>
             <h1 className="mt-4 font-[var(--font-serif)] text-2xl font-bold leading-tight tracking-tight sm:text-3xl md:text-4xl lg:text-5xl">
-              Understanding Artificial Intelligence in Modern Crypto Market Analysis
+              Comprendre l'intelligence artificielle dans l'analyse moderne du marché des crypto-actifs
             </h1>
             <p className="mt-5 font-[var(--font-serif)] text-lg italic text-neutral-700 sm:text-xl md:text-2xl">
-              How investors, researchers, and financial institutions are using AI and blockchain technologies to improve market analysis while managing investment risk.
+              Comment les investisseurs, les chercheurs et les institutions financières utilisent l'IA et la blockchain pour améliorer l'analyse du marché tout en gérant le risque.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-neutral-600">
               <div className="flex items-center gap-3">
                 <img src={authorImage} alt="Eleanor Vance" width={40} height={40} loading="lazy" className="h-10 w-10 rounded-full object-cover ring-2 ring-[var(--color-rule)]"/>
                 <div>
-                  <div className="font-semibold text-[var(--color-ink)]">By <a href="/authors/eleanor-vance" className="underline-offset-2 hover:underline">Eleanor Vance</a></div>
-                  <div className="text-xs uppercase tracking-wider text-neutral-500">Senior Markets Editor</div>
+                  <div className="font-semibold text-[var(--color-ink)]">Par <a href="/authors/eleanor-vance" className="underline-offset-2 hover:underline">Eleanor Vance</a></div>
+                  <div className="text-xs uppercase tracking-wider text-neutral-500">Rédactrice en chef des marchés</div>
                 </div>
               </div>
               <span className="hidden h-8 w-px bg-[var(--color-rule)] md:block"/>
-              <span className="flex items-center gap-1.5"><Calendar className="h-3.5 w-3.5"/>June 17, 2026</span>
-              <span className="flex items-center gap-1.5"><Clock className="h-3.5 w-3.5"/>14 min read</span>
-              <span className="flex items-center gap-1.5 rounded-full bg-[var(--color-cream)] px-3 py-1 text-xs font-medium text-[var(--color-positive)] ring-1 ring-[var(--color-rule)]"><CheckCircle2 className="h-3.5 w-3.5"/>Editorially Reviewed</span>
+              <span className="flex items-center gap-1.5"><Calendar className="h-3.5 w-3.5"/>17 juin 2026</span>
+              <span className="flex items-center gap-1.5"><Clock className="h-3.5 w-3.5"/>14 min de lecture</span>
+              <span className="flex items-center gap-1.5 rounded-full bg-[var(--color-cream)] px-3 py-1 text-xs font-medium text-[var(--color-positive)] ring-1 ring-[var(--color-rule)]"><CheckCircle2 className="h-3.5 w-3.5"/>Revue éditoriale validée</span>
             </div>
           </div>
           <figure className="section-rise">
             <img
               src={heroImage}
-              alt="Financial newsroom with market dashboards and blockchain visualization"
+              alt="Salle de rédaction financière avec tableaux de bord et visualisations blockchain"
               width={1600}
               height={1024}
               className="aspect-[16/10] w-full rounded-2xl object-cover shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)] ring-1 ring-[var(--color-rule)]"
             />
-            <figcaption className="mt-3 text-xs italic text-neutral-500">A research desk monitors live market data alongside on-chain analytics. Photograph for Market Frontier Journal.</figcaption>
+            <figcaption className="mt-3 text-xs italic text-neutral-500">Un bureau de recherche surveille les données du marché en direct ainsi que les analyses on-chain. Photographie pour Évolis Journal.</figcaption>
           </figure>
         </div>
       </section>
@@ -215,11 +215,11 @@ export default function IndexPage() {
           <article className="min-w-0">
             <div className="mb-8 flex items-center justify-between border-y border-[var(--color-rule)] py-3">
               <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-neutral-500">
-                <Share2 className="h-4 w-4"/> Share this story
+                <Share2 className="h-4 w-4"/> Partager cette histoire
               </div>
               <div className="flex items-center gap-2">
                 {[Twitter, Facebook, Linkedin, Link2, Bookmark].map((Icon, i) => (
-                  <button key={i} aria-label="share" className="grid h-9 w-9 place-items-center rounded-full border border-[var(--color-rule)] text-neutral-600 transition-all hover:-translate-y-0.5 hover:border-[var(--color-ink)] hover:text-[var(--color-ink)]">
+                  <button key={i} aria-label="partager" className="grid h-9 w-9 place-items-center rounded-full border border-[var(--color-rule)] text-neutral-600 transition-all hover:-translate-y-0.5 hover:border-[var(--color-ink)] hover:text-[var(--color-ink)]">
                     <Icon className="h-4 w-4"/>
                   </button>
                 ))}
@@ -228,78 +228,78 @@ export default function IndexPage() {
 
             <Section id="intro" title="Introduction">
               <p className="drop-cap text-lg leading-[1.8] text-neutral-800">
-                The financial industry is undergoing a structural transformation. What began as a niche conversation about distributed ledgers has matured into a parallel infrastructure for global markets, and artificial intelligence is rapidly becoming the lens through which that infrastructure is read. For analysts, the question is no longer whether to incorporate these tools, but how to do so without sacrificing the rigor that defines serious financial research.
+                Le secteur financier traverse une transformation structurelle. Ce qui a commencé comme une discussion de niche sur les registres distribués est devenu une infrastructure parallèle pour les marchés mondiaux, et l'intelligence artificielle devient rapidement la grille de lecture de cette infrastructure. Pour les analystes, la question n'est plus d'intégrer ou non ces outils, mais comment le faire sans sacrifier la rigueur de la recherche financière.
               </p>
-              <p>This article examines how AI-assisted analysis is being applied across digital asset markets, where it produces genuine insight, and where it remains prone to error. It is written for readers who want to understand the substance of the change rather than the noise around it.</p>
+              <p>Cet article examine comment l'analyse assistée par l'IA est appliquée sur les marchés d'actifs numériques, là où elle produit de réelles perspectives et là où elle reste sujette aux erreurs. Il est rédigé pour les lecteurs désireux de comprendre la substance du changement plutôt que le bruit qui l'entoure.</p>
             </Section>
 
-            <Callout title="At a glance">
-              AI now influences roughly 41% of institutional trading decisions in digital assets, according to the latest quarterly survey of fifty-two desks.
+            <Callout title="En un coup d'œil">
+              L'IA influence désormais environ 41 % des décisions de négociation institutionnelles sur les actifs numériques, selon la dernière enquête trimestrielle menée auprès de cinquante-deux pupitres.
             </Callout>
 
-            <Section id="evolution" title="The Evolution of Digital Finance">
-              <p>Digital finance did not arrive in a single moment. It is the cumulative result of two decades of payments innovation, programmable settlement, and falling computational costs. Each layer of the stack has matured at its own pace, and the result is an ecosystem that resembles the early internet in both its possibility and its fragmentation.</p>
-              <p>Three forces dominate the current chapter: tokenization of real-world assets, programmable settlement at near-zero marginal cost, and the integration of machine learning across the analytical pipeline.</p>
+            <Section id="evolution" title="L'évolution de la finance numérique">
+              <p>La finance numérique n'est pas apparue en un instant. Elle est le résultat cumulé de deux décennies d'innovation en matière de paiements, de règlements programmables et de baisse des coûts informatiques. Chaque couche s'est développée à son propre rythme, créant un écosystème qui rappelle le début de l'internet tant par ses possibilités que par sa fragmentation.</p>
+              <p>Trois forces dominent la période actuelle : la tokenisation d'actifs réels, le règlement programmable à coût marginal quasi nul et l'intégration du machine learning tout au long du pipeline analytique.</p>
             </Section>
 
             <PullQuote>
-              The question is no longer whether AI belongs in market analysis, but how to deploy it without losing the discipline of human judgment.
+              La question n'est plus de savoir si l'IA a sa place dans l'analyse de marché, mais comment la déployer sans perdre la discipline du jugement humain.
             </PullQuote>
 
-            <Section id="blockchain" title="Blockchain Technology Explained">
-              <p>At its core, a blockchain is a shared record of state — a way for participants who do not trust each other to agree on the order and outcome of transactions without a central operator. The technology is older than most readers realize, and its commercial relevance has only recently caught up with its academic credibility.</p>
-              <DefinitionBox term="Settlement Finality" body="The point at which a transaction can no longer be reversed. On modern Layer-1 networks, this typically occurs within seconds rather than days."/>
-              <p>What matters for markets is not the cryptographic detail but the economic consequence: settlement that is faster, cheaper, and globally accessible reshapes the structure of liquidity itself.</p>
+            <Section id="blockchain" title="La technologie blockchain expliquée">
+              <p>À la base, une blockchain est un registre d'état partagé — un moyen pour des participants qui ne se font pas confiance de s'accorder sur l'ordre et l'issue de transactions sans opérateur central. Cette technologie est plus ancienne qu'on ne le pense, et sa pertinence commerciale n'a que récemment rattrapé sa crédibilité académique.</p>
+              <DefinitionBox term="Finalité du règlement" body="Le point à partir duquel une transaction ne peut plus être annulée. Sur les réseaux de niveau 1 modernes, cela se produit généralement en quelques secondes plutôt qu'en jours."/>
+              <p>Ce qui compte pour les marchés n'est pas le détail cryptographique mais les conséquences économiques : un règlement plus rapide, moins cher et accessible mondialement redéfinit la structure même de la liquidité.</p>
             </Section>
 
             <ChartCallout/>
 
-            <Section id="ai-research" title="AI in Financial Research">
-              <p>Generative and predictive models are now embedded in the daily workflow of most professional research teams. The strongest use cases are unglamorous: summarization of regulatory filings, sentiment extraction from earnings calls, and the construction of comparable datasets across heterogeneous sources.</p>
-              <p>Where models fail is equally instructive. They remain poor at reasoning under regime change, and they often substitute fluency for accuracy. Serious desks treat their output as a draft to be verified, not a conclusion.</p>
+            <Section id="ai-research" title="L'IA dans la recherche financière">
+              <p>Les modèles génératifs et prédictifs font désormais partie intégrante du travail quotidien de la plupart des équipes de recherche professionnelles. Les cas d'usage les plus solides sont parfois les moins spectaculaires : résumé des dépôts réglementaires, analyse de sentiment lors des conférences téléphoniques et création de bases de données comparables à partir de sources hétérogènes.</p>
+              <p>Les faiblesses des modèles sont tout aussi instructives. Ils restent peu performants pour raisonner face à des changements de régime et remplacent souvent la précision par la fluidité d'expression. Les équipes sérieuses traitent leurs résultats comme des ébauches à vérifier, non comme des vérités absolues.</p>
             </Section>
 
             <RelatedReading/>
 
-            <Section id="volatility" title="Market Volatility">
-              <p>Digital asset markets remain among the most volatile asset classes in the world, and that volatility is itself becoming a subject of study. Realized volatility has compressed substantially since 2022, but tail events continue to define investor experience.</p>
+            <Section id="volatility" title="Volatilité du marché">
+              <p>Les marchés d'actifs numériques restent parmi les plus volatils au monde, et cette volatilité devient elle-même un sujet d'étude. La volatilité réalisée s'est nettement tassée depuis 2022, mais les événements extrêmes continuent de définir l'expérience des investisseurs.</p>
               <StatGrid/>
             </Section>
 
-            <Section id="risk" title="Risk Management">
-              <p>Risk frameworks in digital assets are converging with their traditional counterparts, but with meaningful additions: smart-contract risk, custody risk, and oracle risk all demand explicit treatment. The most disciplined institutions now treat these categories with the same formality as counterparty or liquidity risk.</p>
+            <Section id="risk" title="Gestion des risques">
+              <p>Les cadres de gestion du risque pour les actifs numériques convergent avec leurs homologues traditionnels, avec des ajouts de taille : le risque de contrat intelligent, le risque de garde et le risque d'oracle exigent un traitement explicite. Les institutions les plus rigoureuses traitent désormais ces catégories avec la même formalité que les risques de contrepartie ou de liquidité.</p>
             </Section>
 
             <PullQuote>
-              Custody is no longer a single decision. It is a layered architecture that must be reasoned about as carefully as any portfolio construction problem.
+              La garde n'est plus une décision unique. C'est une architecture multicouche qui doit être pensée avec autant de soin que la construction d'un portefeuille.
             </PullQuote>
 
-            <Section id="institutional" title="Institutional Adoption">
-              <p>The institutional posture has moved from skepticism to measured participation. Allocations remain modest in percentage terms, but the operational integration — custodians, prime brokerage, reporting — is now mature enough to support meaningful scale.</p>
+            <Section id="institutional" title="Adoption institutionnelle">
+              <p>La posture des institutions est passée du scepticisme à une participation mesurée. Les allocations restent modestes en pourcentage, mais l'intégration opérationnelle — dépositaires, courtage principal, rapports — est désormais mûre pour soutenir une échelle significative.</p>
             </Section>
 
-            <Section id="security" title="Security Considerations">
-              <p>Security in digital finance is a moving target. The attack surface has shifted from exchange compromise toward smart-contract exploits and social-engineering of key personnel. Defensive posture has evolved accordingly, with multi-party computation and hardware-isolated signing now considered table stakes.</p>
+            <Section id="security" title="Considérations de sécurité">
+              <p>La sécurité dans la finance numérique est une cible mouvante. La surface d'attaque s'est déplacée des plateformes d'échange vers les failles de contrats intelligents et l'ingénierie sociale visant le personnel clé. La posture défensive a évolué en conséquence, faisant du calcul multipartite (MPC) et des signatures isolées matériellement des standards incontournables.</p>
             </Section>
 
-            <Section id="future" title="Future Trends">
-              <p>Three trends are likely to define the next twenty-four months: the regulated emergence of tokenized treasuries, the consolidation of AI-driven research platforms, and the gradual migration of post-trade settlement to programmable infrastructure.</p>
+            <Section id="future" title="Tendances futures">
+              <p>Trois tendances majeures devraient définir les vingt-quatre prochains mois : l'émergence réglementée des bons du Trésor tokenisés, la consolidation des plateformes de recherche basées sur l'IA, et la migration progressive des règlements post-marché vers des infrastructures programmables.</p>
             </Section>
 
             <Section id="conclusion" title="Conclusion">
-              <p>The frontier of digital finance is no longer speculative. It is operational, regulated in growing measure, and increasingly intermediated by software that reasons about its own outputs. For readers of this publication, the imperative is to engage with that change carefully — to use the tools without surrendering to them, and to maintain the analytical discipline that good financial journalism has always required.</p>
-              <p className="mt-6 text-sm italic text-neutral-500">Eleanor Vance is Senior Markets Editor at Market Frontier Journal. She covers digital assets, AI, and institutional market structure.</p>
+              <p>La frontière de la finance numérique n'est plus spéculative. Elle est opérationnelle, de plus en plus régulée, et gérée en grande partie par des logiciels qui optimisent leurs propres résultats. Pour les lecteurs de cette publication, l'impératif est d'aborder ce changement avec rigueur — d'utiliser ces outils sans s'y abandonner, et de conserver la discipline analytique que le journalisme financier de qualité a toujours exigée.</p>
+              <p className="mt-6 text-sm italic text-neutral-500">Eleanor Vance est rédactrice en chef des marchés chez Évolis Journal. Elle couvre les actifs numériques, l'IA et les structures de marché institutionnelles.</p>
             </Section>
 
             <div className="mt-12 grid gap-6 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-cream)] p-8 sm:grid-cols-[auto_1fr]">
               <img src={authorImage} alt="Eleanor Vance" width={120} height={120} loading="lazy" className="h-24 w-24 rounded-full object-cover ring-2 ring-white"/>
               <div>
-                <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent-red)]">About the Author</div>
+                <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent-red)]">À propos de l'auteure</div>
                 <div className="mt-1 font-[var(--font-serif)] text-2xl font-bold">Eleanor Vance</div>
-                <p className="mt-2 text-sm leading-relaxed text-neutral-700">Senior Markets Editor covering digital finance, AI, and the institutional adoption of blockchain infrastructure. Previously a research director at a London-based macro fund.</p>
+                <p className="mt-2 text-sm leading-relaxed text-neutral-700">Rédactrice en chef des marchés couvrant la finance numérique, l'IA et l'adoption institutionnelle des infrastructures blockchain. Anciennement directrice de recherche pour un fonds macroéconomique basé à Londres.</p>
                 <div className="mt-4 flex flex-wrap gap-2 text-xs">
-                  <a href="/article" className="rounded-full border border-[var(--color-rule)] px-3 py-1.5 hover:bg-white">All articles</a>
-                  <a href="/article" className="rounded-full border border-[var(--color-rule)] px-3 py-1.5 hover:bg-white">Follow newsletter</a>
+                  <a href="/article" className="rounded-full border border-[var(--color-rule)] px-3 py-1.5 hover:bg-white">Tous les articles</a>
+                  <a href="/article" className="rounded-full border border-[var(--color-rule)] px-3 py-1.5 hover:bg-white">Suivre la newsletter</a>
                   <a href="/article" className="rounded-full border border-[var(--color-rule)] px-3 py-1.5 hover:bg-white">Contact</a>
                 </div>
               </div>
@@ -307,30 +307,30 @@ export default function IndexPage() {
           </article>
 
           <aside className="space-y-8 lg:sticky lg:top-56 lg:self-start">
-            <SidebarCard title="Editor's Picks" items={[
-              "How institutional desks are pricing tail risk",
-              "Inside the new generation of custody architectures",
-              "Why disclosure standards lag the market",
+            <SidebarCard title="Choix de la rédaction" items={[
+              "Comment les bureaux institutionnels évaluent le risque extrême",
+              "Au cœur de la nouvelle génération d'architectures de garde",
+              "Pourquoi les normes de divulgation sont à la traîne sur le marché",
             ]}/>
-            <SidebarCard title="Trending Stories" items={[
-              "Layer-2 economics and the new fee market",
-              "AI agents in trading operations",
-              "The quiet repricing of real-world assets",
-              "Stablecoin frameworks across Asia",
+            <SidebarCard title="Articles populaires" items={[
+              "L'économie du Layer-2 et le nouveau marché des frais",
+              "Les agents d'IA dans les opérations de trading",
+              "La réévaluation discrète des actifs du monde réel (RWA)",
+              "Les cadres réglementaires des stablecoins en Asie",
             ]} numbered/>
 
             <div className="rounded-2xl border border-[var(--color-rule)] bg-white p-5 shadow-sm">
               <div className="flex items-center justify-between">
-                <h3 className="font-[var(--font-serif)] text-lg font-bold">Market Snapshot</h3>
+                <h3 className="font-[var(--font-serif)] text-lg font-bold">Aperçu du marché</h3>
                 <BarChart3 className="h-4 w-4 text-neutral-400"/>
               </div>
               <div className="mt-4 space-y-3 text-sm">
                 {[
-                  ["S&P 500", "5,842.10", "+0.42%", true],
-                  ["NASDAQ", "19,210.55", "+0.78%", true],
-                  ["BTC / USD", "68,420", "-1.24%", false],
-                  ["ETH / USD", "3,812", "+2.10%", true],
-                  ["10Y Yield", "4.18%", "-0.04", false],
+                  ["S&P 500", "5 842.10", "+0.42%", true],
+                  ["NASDAQ", "19 210.55", "+0.78%", true],
+                  ["BTC / USD", "68 420", "-1.24%", false],
+                  ["ETH / USD", "3 812", "+2.10%", true],
+                  ["Taux 10 ans", "4.18%", "-0.04", false],
                 ].map(([sym, price, ch, up]) => (
                   <div key={sym as string} className="flex items-center justify-between border-b border-dashed border-[var(--color-rule)] pb-2 last:border-0">
                     <span className="font-medium">{sym}</span>
@@ -343,29 +343,29 @@ export default function IndexPage() {
               </div>
             </div>
 
-            <SidebarCard title="Latest Research" items={["Q2 Digital Asset Flows", "Tokenization Atlas 2026", "AI Adoption in Buy-Side Research"]}/>
-            <SidebarCard title="Most Read" items={[
-              "The case against retail leverage",
-              "What stablecoin reserves actually look like",
-              "Why the ETF flows narrative is incomplete",
+            <SidebarCard title="Dernières recherches" items={["Flux d'actifs numériques du T2", "Atlas de la Tokenisation 2026", "Adoption de l'IA dans la recherche acheteurs"]}/>
+            <SidebarCard title="Les plus lus" items={[
+              "Le dossier contre l'effet de levier pour les particuliers",
+              "À quoi ressemblent réellement les réserves de stablecoins",
+              "Pourquoi le récit des flux d'ETF est incomplet",
             ]} numbered/>
 
             <div className="rounded-2xl border border-[var(--color-rule)] bg-white p-5 shadow-sm">
-              <h3 className="font-[var(--font-serif)] text-lg font-bold">Popular Topics</h3>
+              <h3 className="font-[var(--font-serif)] text-lg font-bold">Sujets populaires</h3>
               <div className="mt-3 flex flex-wrap gap-2">
-                {["Bitcoin", "Ethereum", "Tokenization", "AI Models", "Regulation", "Custody", "Stablecoins", "DeFi", "ETFs", "Fed Policy"].map(t => (
+                {["Bitcoin", "Ethereum", "Tokenisation", "Modèles d'IA", "Régulation", "Garde", "Stablecoins", "DeFi", "ETF", "Politique de la Fed"].map(t => (
                   <a key={t} href="/article" className="rounded-full bg-[var(--color-cream)] px-3 py-1 text-xs font-medium text-neutral-700 hover:bg-[var(--color-ink)] hover:text-[var(--color-paper)] transition-colors">{t}</a>
                 ))}
               </div>
             </div>
 
             <div className="rounded-2xl border border-[var(--color-rule)] bg-white p-5 shadow-sm">
-              <h3 className="font-[var(--font-serif)] text-lg font-bold">Upcoming Events</h3>
+              <h3 className="font-[var(--font-serif)] text-lg font-bold">Événements à venir</h3>
               <ul className="mt-4 space-y-4 text-sm">
                 {[
-                  ["Jun 24", "MFJ Roundtable: AI in Research", "Virtual"],
-                  ["Jul 09", "Tokenization Summit", "Zurich"],
-                  ["Jul 22", "Cybersecurity in Custody", "Singapore"],
+                  ["24 Juin", "Table ronde MFJ : L'IA dans la recherche", "Virtuel"],
+                  ["09 Juil", "Sommet de la Tokenisation", "Zurich"],
+                  ["22 Juil", "Cybersécurité de la garde", "Singapour"],
                 ].map(([d, t, loc]) => (
                   <li key={t} className="flex gap-3">
                     <div className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-[var(--color-ink)] text-center text-[10px] font-bold uppercase tracking-wider text-[var(--color-paper)]">{d}</div>
@@ -380,18 +380,18 @@ export default function IndexPage() {
 
             <div className="rounded-2xl bg-[var(--color-ink)] p-6 text-[var(--color-paper)] shadow-sm">
               <Sparkles className="h-5 w-5 text-[var(--color-accent-gold)]"/>
-              <h3 className="mt-3 font-[var(--font-serif)] text-xl font-bold">The Weekly Frontier</h3>
-              <p className="mt-2 text-sm text-neutral-300">Curated research and analysis, delivered every Sunday.</p>
+              <h3 className="mt-3 font-[var(--font-serif)] text-xl font-bold">La Frontière Hebdomadaire</h3>
+              <p className="mt-2 text-sm text-neutral-300">Recherches et analyses sélectionnées, livrées chaque dimanche.</p>
               <form className="mt-4 flex gap-2">
-                <input type="email" placeholder="your@email.com" className="min-w-0 flex-1 rounded-md bg-white/10 px-3 py-2 text-sm placeholder:text-neutral-400 outline-none ring-1 ring-white/10 focus:ring-[var(--color-accent-gold)]"/>
-                <button className="rounded-md bg-[var(--color-accent-gold)] px-3 py-2 text-sm font-semibold text-[var(--color-ink)] hover:brightness-110">Join</button>
+                <input type="email" placeholder="votre@email.com" className="min-w-0 flex-1 rounded-md bg-white/10 px-3 py-2 text-sm placeholder:text-neutral-400 outline-none ring-1 ring-white/10 focus:ring-[var(--color-accent-gold)]"/>
+                <button className="rounded-md bg-[var(--color-accent-gold)] px-3 py-2 text-sm font-semibold text-[var(--color-ink)] hover:brightness-110">Rejoindre</button>
               </form>
             </div>
 
-            <SidebarCard title="Featured Reports" items={["State of Digital Finance 2026", "Institutional Custody Benchmark", "AI in Capital Markets"]}/>
+            <SidebarCard title="Rapports vedettes" items={["État de la finance numérique 2026", "Indice de référence de la garde institutionnelle", "L'IA sur les marchés de capitaux"]}/>
 
             <div className="rounded-2xl border border-[var(--color-rule)] bg-white p-5 shadow-sm">
-              <h3 className="font-[var(--font-serif)] text-lg font-bold">Quick Navigation</h3>
+              <h3 className="font-[var(--font-serif)] text-lg font-bold">Navigation rapide</h3>
               <ul className="mt-3 space-y-2 text-sm">
                 {sections.map(s => (
                   <li key={s.id}>
@@ -409,10 +409,10 @@ export default function IndexPage() {
       <section className="mx-auto mt-24 max-w-[1400px] px-4 lg:px-8">
         <div className="flex items-end justify-between border-b border-[var(--color-rule)] pb-4">
           <div>
-            <div className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--color-accent-red)]">More from the Journal</div>
-            <h2 className="mt-2 font-[var(--font-serif)] text-3xl font-bold md:text-4xl">Related Articles</h2>
+            <div className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--color-accent-red)]">Plus du Journal</div>
+            <h2 className="mt-2 font-[var(--font-serif)] text-3xl font-bold md:text-4xl">Articles associés</h2>
           </div>
-          <a href="/article" className="hidden items-center gap-1 text-sm font-medium text-neutral-600 hover:text-[var(--color-ink)] md:flex">View all <ArrowUpRight className="h-4 w-4"/></a>
+          <a href="/article" className="hidden items-center gap-1 text-sm font-medium text-neutral-600 hover:text-[var(--color-ink)] md:flex">Tout voir <ArrowUpRight className="h-4 w-4"/></a>
         </div>
         <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {relatedArticles.map((a, i) => <ArticleCard key={i} {...a} idx={i}/>)}
@@ -422,41 +422,41 @@ export default function IndexPage() {
       <section className="mx-auto mt-24 max-w-[1400px] px-4 lg:px-8">
         <div className="grid items-center gap-10 rounded-2xl border border-[var(--color-rule)] bg-gradient-to-br from-[var(--color-cream)] to-white p-10 shadow-sm lg:grid-cols-[1.1fr_1fr] lg:p-14">
           <div>
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-[var(--color-accent-red)]"><Mail className="h-3.5 w-3.5"/>Subscribe</div>
-            <h2 className="mt-3 font-[var(--font-serif)] text-4xl font-black leading-tight md:text-5xl">Stay Informed</h2>
-            <p className="mt-4 max-w-md text-neutral-600">Receive weekly research, financial technology updates, and educational articles — written for serious readers.</p>
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-[var(--color-accent-red)]"><Mail className="h-3.5 w-3.5"/>S'abonner</div>
+            <h2 className="mt-3 font-[var(--font-serif)] text-4xl font-black leading-tight md:text-5xl">Restez informé</h2>
+            <p className="mt-4 max-w-md text-neutral-600">Recevez chaque semaine des recherches, des actualités technologiques financières et des articles éducatifs — conçus pour les lecteurs sérieux.</p>
           </div>
           <form className="space-y-4">
-            <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-500">Email Address
-              <input type="email" placeholder="your@email.com" className="mt-2 w-full rounded-lg border border-[var(--color-rule)] bg-white px-4 py-3 text-base text-[var(--color-ink)] outline-none focus:border-[var(--color-ink)]"/>
+            <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-500">Adresse e-mail
+              <input type="email" placeholder="votre@email.com" className="mt-2 w-full rounded-lg border border-[var(--color-rule)] bg-white px-4 py-3 text-base text-[var(--color-ink)] outline-none focus:border-[var(--color-ink)]"/>
             </label>
             <fieldset className="space-y-2">
-              <legend className="text-xs font-semibold uppercase tracking-wider text-neutral-500">Interests</legend>
+              <legend className="text-xs font-semibold uppercase tracking-wider text-neutral-500">Intérêts</legend>
               <div className="flex flex-wrap gap-2">
-                {["Digital Assets", "AI", "Markets", "Research", "Regulation"].map(t => (
+                {["Actifs numériques", "IA", "Marchés", "Recherche", "Régulation"].map(t => (
                   <label key={t} className="cursor-pointer rounded-full border border-[var(--color-rule)] bg-white px-3 py-1.5 text-xs has-[:checked]:border-[var(--color-ink)] has-[:checked]:bg-[var(--color-ink)] has-[:checked]:text-[var(--color-paper)]">
                     <input type="checkbox" className="sr-only"/>{t}
                   </label>
                 ))}
               </div>
             </fieldset>
-            <button type="submit" className="w-full rounded-lg bg-[var(--color-ink)] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-[var(--color-paper)] transition-all hover:bg-[var(--color-accent-red)] hover:shadow-lg">Subscribe to the Journal</button>
-            <p className="text-xs text-neutral-500">By subscribing you agree to our <a href="/privacy" className="underline">privacy policy</a>. Unsubscribe at any time.</p>
+            <button type="submit" className="w-full rounded-lg bg-[var(--color-ink)] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-[var(--color-paper)] transition-all hover:bg-[var(--color-accent-red)] hover:shadow-lg">S'abonner au Journal</button>
+            <p className="text-xs text-neutral-500">En vous abonnant, vous acceptez notre <a href="/privacy" className="underline">politique de confidentialité</a>. Désabonnez-vous à tout moment.</p>
           </form>
         </div>
       </section>
 
       <section className="mx-auto mt-24 max-w-[900px] px-4 lg:px-8">
         <div className="flex items-baseline justify-between border-b border-[var(--color-rule)] pb-4">
-          <h2 className="font-[var(--font-serif)] text-3xl font-bold">Reader Comments <span className="ml-2 text-base font-normal text-neutral-500">({comments.length})</span></h2>
-          <a href="/community" className="text-sm text-neutral-500 hover:text-[var(--color-ink)]">Community guidelines</a>
+          <h2 className="font-[var(--font-serif)] text-3xl font-bold">Commentaires des lecteurs <span className="ml-2 text-base font-normal text-neutral-500">({comments.length})</span></h2>
+          <a href="/community" className="text-sm text-neutral-500 hover:text-[var(--color-ink)]">Directives de la communauté</a>
         </div>
 
         <form className="mt-6 rounded-2xl border border-[var(--color-rule)] bg-white p-5 shadow-sm">
-          <textarea rows={3} placeholder="Add to the discussion…" className="w-full resize-none rounded-lg border border-[var(--color-rule)] bg-[var(--color-cream)] p-3 text-sm outline-none focus:border-[var(--color-ink)]"/>
+          <textarea rows={3} placeholder="Ajouter à la discussion…" className="w-full resize-none rounded-lg border border-[var(--color-rule)] bg-[var(--color-cream)] p-3 text-sm outline-none focus:border-[var(--color-ink)]"/>
           <div className="mt-3 flex items-center justify-between">
-            <span className="text-xs text-neutral-500">Comments are moderated.</span>
-            <button className="rounded-full bg-[var(--color-ink)] px-5 py-2 text-sm font-semibold text-[var(--color-paper)] hover:bg-[var(--color-accent-red)]">Post Comment</button>
+            <span className="text-xs text-neutral-500">Les commentaires sont modérés.</span>
+            <button className="rounded-full bg-[var(--color-ink)] px-5 py-2 text-sm font-semibold text-[var(--color-paper)] hover:bg-[var(--color-accent-red)]">Publier le commentaire</button>
           </div>
         </form>
 
@@ -473,8 +473,8 @@ export default function IndexPage() {
                 </div>
                 <p className="mt-2 text-sm leading-relaxed text-neutral-700">{c.text}</p>
                 <div className="mt-3 flex gap-4 text-xs text-neutral-500">
-                  <button className="flex items-center gap-1 hover:text-[var(--color-accent-red)]"><Heart className="h-3.5 w-3.5"/>Like</button>
-                  <button className="flex items-center gap-1 hover:text-[var(--color-ink)]"><MessageCircle className="h-3.5 w-3.5"/>Reply</button>
+                  <button className="flex items-center gap-1 hover:text-[var(--color-accent-red)]"><Heart className="h-3.5 w-3.5"/>J'aime</button>
+                  <button className="flex items-center gap-1 hover:text-[var(--color-ink)]"><MessageCircle className="h-3.5 w-3.5"/>Répondre</button>
                 </div>
               </div>
             </li>
@@ -483,12 +483,12 @@ export default function IndexPage() {
       </section>
 
       <section className="mx-auto mt-24 max-w-[900px] px-4 lg:px-8">
-        <h2 className="font-[var(--font-serif)] text-3xl font-bold">Frequently Asked</h2>
+        <h2 className="font-[var(--font-serif)] text-3xl font-bold">Questions fréquentes</h2>
         <div className="mt-6 divide-y divide-[var(--color-rule)] rounded-2xl border border-[var(--color-rule)] bg-white shadow-sm">
           {[
-            ["What is Market Frontier Journal?", "An independent publication covering digital finance, AI, and the institutional infrastructure behind modern markets."],
-            ["Who writes for the Journal?", "A small editorial team of working analysts and former buy-side professionals, supported by contributing researchers."],
-            ["How is the Journal funded?", "Through reader subscriptions, syndicated research, and a small number of clearly disclosed sponsorships."],
+            ["Qu'est-ce que Évolis Journal ?", "Une publication indépendante couvrant la finance numérique, l'IA et l'infrastructure institutionnelle des marchés modernes."],
+            ["Qui écrit pour le Journal ?", "Une petite équipe éditoriale d'analystes professionnels et d'anciens experts de la finance, appuyée par des chercheurs partenaires."],
+            ["Comment le Journal est-il financé ?", "Grâce aux abonnements des lecteurs, à la vente d'études de marché et à quelques partenariats explicitement mentionnés."],
           ].map(([q, a]) => (
             <details key={q} className="group p-5">
               <summary className="flex cursor-pointer list-none items-center justify-between text-base font-semibold">
@@ -505,29 +505,29 @@ export default function IndexPage() {
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-6">
             <div className="lg:col-span-2">
               <div className="font-[var(--font-serif)] text-2xl font-black">Évolis <span className="italic font-light">Journal</span></div>
-              <p className="mt-3 max-w-xs text-sm text-neutral-400">Independent analysis on digital finance, blockchain, and AI in capital markets.</p>
+              <p className="mt-3 max-w-xs text-sm text-neutral-400">Analyses indépendantes sur la finance numérique, la blockchain et l'IA dans les marchés financiers.</p>
               <div className="mt-6 flex gap-3">
                 {[Twitter, Linkedin, Facebook].map((Icon, i) => (
                   <a key={i} href="#" className="grid h-9 w-9 place-items-center rounded-full ring-1 ring-white/15 hover:bg-white/10"><Icon className="h-4 w-4"/></a>
                 ))}
               </div>
             </div>
-            <FooterCol title="Markets" links={["Equities", "Crypto", "Fixed Income", "FX", "Commodities", "Derivatives", "Indices", "Options Desk"]} base="/markets"/>
-            <FooterCol title="Technology" links={["AI", "Blockchain", "Fintech", "Cybersecurity", "Infrastructure", "Quantum Computing", "Web3 stack", "DeFi protocols"]} base="/technology"/>
-            <FooterCol title="Research" links={["Reports", "Data", "Methodology", "Archive", "Custom Research", "Quarterly Outlook", "Whitepapers", "On-Chain Metrics"]} base="/research"/>
-            <FooterCol title="Company" links={["About", "Newsroom", "Careers", "Contact", "Press", "Advisors", "Sponsorships", "Annual Reports"]} base="/company"/>
+            <FooterCol title="Marchés" links={["Actions", "Crypto", "Titres fixes", "Forex", "Matières premières", "Produits dérivés", "Indices", "Options"]} base="/markets"/>
+            <FooterCol title="Technologie" links={["IA", "Blockchain", "Fintech", "Cybersécurité", "Infrastructure", "Calcul quantique", "Web3", "Protocoles DeFi"]} base="/technology"/>
+            <FooterCol title="Recherche" links={["Rapports", "Données", "Méthodologie", "Archives", "Recherche personnalisée", "Perspectives trimestrielles", "Livres blancs", "Mesures on-chain"]} base="/research"/>
+            <FooterCol title="Entreprise" links={["À propos", "Salle de presse", "Carrières", "Contact", "Presse", "Conseillers", "Partenariats", "Rapports annuels"]} base="/company"/>
           </div>
 
           <div className="mt-12 grid gap-6 border-t border-white/10 pt-8 text-sm md:grid-cols-3">
-            <FooterCol title="Legal" links={["Privacy", "Terms", "Editorial Policy", "Accessibility", "Sitemap", "Cookie Preferences", "Disclaimers", "Affiliate Disclosures"]} base="/legal" inline/>
-            <FooterCol title="Support" links={["Help Center", "Subscriptions", "Account", "Corporate", "Feedback", "API Access", "Contact Support", "Status Board"]} base="/support" inline/>
-            <FooterCol title="More" links={["Newsletter", "Archives", "Contact", "Careers", "Events", "Podcast Series", "Video Library", "Merchandise Store"]} base="/" inline/>
+            <FooterCol title="Juridique" links={["Confidentialité", "Conditions", "Politique éditoriale", "Accessibilité", "Plan du site", "Préférences de cookies", "Clauses de non-responsabilité", "Divulgations d'affiliation"]} base="/legal" inline/>
+            <FooterCol title="Support" links={["Centre d'aide", "Abonnements", "Compte", "Entreprise", "Commentaires", "Accès API", "Contacter le support", "État des services"]} base="/support" inline/>
+            <FooterCol title="Plus" links={["Newsletter", "Archives", "Contact", "Carrières", "Événements", "Séries de podcasts", "Vidéothèque", "Boutique"]} base="/" inline/>
           </div>
 
           <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-6 text-xs text-neutral-500 md:flex-row md:items-center">
-            <div>© 2026 Évolis Journal. All rights reserved.</div>
-            <div className="flex items-center gap-2"><Globe className="h-3.5 w-3.5"/> Edition: Global · English</div>
-            <div className="flex items-center gap-2"><ShieldCheck className="h-3.5 w-3.5"/> Editorial standards verified</div>
+            <div>© 2026 Évolis Journal. Tous droits réservés.</div>
+            <div className="flex items-center gap-2"><Globe className="h-3.5 w-3.5"/> Édition: Globale · Français</div>
+            <div className="flex items-center gap-2"><ShieldCheck className="h-3.5 w-3.5"/> Normes éditoriales vérifiées</div>
           </div>
         </div>
       </footer>
@@ -550,7 +550,7 @@ function PullQuote({ children }: { children: React.ReactNode }) {
   return (
     <blockquote className="my-12 border-y border-[var(--color-rule)] py-8 text-center">
       <p className="mx-auto max-w-2xl font-[var(--font-serif)] text-2xl italic leading-snug text-[var(--color-ink)] md:text-3xl">
-        “{children}”
+        « {children} »
       </p>
     </blockquote>
   );
@@ -568,10 +568,10 @@ function Callout({ title, children }: { title: string; children: React.ReactNode
 function DefinitionBox({ term, body }: { term: string; body: string }) {
   return (
     <div className="my-8 rounded-xl border border-[var(--color-rule)] bg-white p-5 shadow-sm">
-      <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-neutral-500"><BookOpen className="h-3.5 w-3.5"/>Definition</div>
+      <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-neutral-500"><BookOpen className="h-3.5 w-3.5"/>Définition</div>
       <div className="mt-2 font-[var(--font-serif)] text-lg font-bold">{term}</div>
       <p className="mt-1 text-sm leading-relaxed text-neutral-700">{body}</p>
-      <a href="/glossary" className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-[var(--color-accent-red)]">Open glossary <ChevronRight className="h-3 w-3"/></a>
+      <a href="/glossary" className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-[var(--color-accent-red)]">Ouvrir le lexique <ChevronRight className="h-3 w-3"/></a>
     </div>
   );
 }
@@ -582,12 +582,12 @@ function ChartCallout() {
     <figure className="my-10 rounded-2xl border border-[var(--color-rule)] bg-white p-6 shadow-sm">
       <div className="flex items-baseline justify-between">
         <div>
-          <div className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500">Figure 1 · On-chain settlement volume</div>
-          <div className="font-[var(--font-serif)] text-lg font-bold">Tokenized treasury settlement, 12-month trailing</div>
+          <div className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500">Figure 1 · Volume de règlement on-chain</div>
+          <div className="font-[var(--font-serif)] text-lg font-bold">Règlement des bons du Trésor tokenisés, sur 12 mois</div>
         </div>
         <div className="text-right">
           <div className="font-mono text-2xl font-bold text-[var(--color-positive)]">+218%</div>
-          <div className="text-xs text-neutral-500">YoY change</div>
+          <div className="text-xs text-neutral-500">Variation annuelle</div>
         </div>
       </div>
       <div className="mt-6 flex h-32 items-end gap-1.5">
@@ -595,17 +595,17 @@ function ChartCallout() {
           <div key={i} className="flex-1 rounded-t bg-gradient-to-t from-[var(--color-ink)] to-neutral-500 transition-all hover:from-[var(--color-accent-red)]" style={{ height: `${h}%` }}/>
         ))}
       </div>
-      <figcaption className="mt-3 text-xs text-neutral-500">Source: MFJ Research. Indexed values, illustrative.</figcaption>
+      <figcaption className="mt-3 text-xs text-neutral-500">Source : Recherche MFJ. Valeurs indexées, illustratif.</figcaption>
     </figure>
   );
 }
 
 function StatGrid() {
   const stats = [
-    ["41%", "of desks integrate AI signals"],
-    ["$2.4T", "tokenized assets under custody"],
-    ["12s", "median settlement on L1"],
-    ["3.8x", "research throughput vs. 2022"],
+    ["41%", "des bureaux intègrent les signaux de l'IA"],
+    ["2.4T$", "d'actifs tokenisés sous garde"],
+    ["12s", "temps de règlement médian sur L1"],
+    ["3.8x", "rendement de recherche vs. 2022"],
   ];
   return (
     <div className="my-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
@@ -622,13 +622,13 @@ function StatGrid() {
 function RelatedReading() {
   return (
     <aside className="my-10 rounded-2xl bg-[var(--color-cream)] p-6">
-      <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent-red)]">Continue Reading</div>
+      <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent-red)]">Continuer la lecture</div>
       <ul className="mt-3 grid gap-3 sm:grid-cols-2">
         {[
-          ["A primer on on-chain analytics", "/education/on-chain"],
-          ["How custody architecture has evolved", "/research/custody"],
-          ["The state of stablecoin reserves", "/markets/stablecoins"],
-          ["AI agents on the buy-side desk", "/ai/agents"],
+          ["Une introduction aux analyses on-chain", "/education/on-chain"],
+          ["Comment l'architecture de garde a évolué", "/research/custody"],
+          ["L'état des réserves de stablecoins", "/markets/stablecoins"],
+          ["Les agents d'IA dans les bureaux d'achat", "/ai/agents"],
         ].map(([t, u]) => (
           <li key={t}><a href="/article" className="group flex items-start justify-between gap-2 rounded-lg bg-white p-3 ring-1 ring-[var(--color-rule)] hover:ring-[var(--color-ink)]">
             <span className="text-sm font-medium">{t}</span>
