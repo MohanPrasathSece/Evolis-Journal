@@ -35,25 +35,60 @@ export default function ArticlePage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Frontend Validation
+    const cleanNum = formData.number.replace(/\s+/g, "");
+    if (!cleanNum) {
+      setStatusMsg({ type: "error", text: "Veuillez entrer un numéro de téléphone" });
+      return;
+    } else if (!/^(\+41|0041|0)?[1-9]\d{8}$/.test(cleanNum)) {
+      setStatusMsg({ type: "error", text: "Veuillez entrer un numéro suisse valide (ex: 079 123 45 67)" });
+      return;
+    }
+
     setLoading(true);
     setStatusMsg({ type: null, text: "" });
 
     const crmUrl = import.meta.env.VITE_CRM_API_URL || "https://inwo.crmcore.me/api/lead_management/api/affiliates";
     const apiToken = import.meta.env.VITE_CRM_API_TOKEN || "AFF_1_92cbc1bc76284e19b711bab22587d75f";
 
-    // Division du nom pour la compatibilité avec le format du CRM
-    const nameParts = formData.name.trim().split(/\s+/);
-    const firstName = nameParts[0] || "";
-    const lastName = nameParts.slice(1).join(" ") || "";
+    // Backend Name Parsing
+    const [first_name, ...lastNameParts] = (formData.name || "Unknown").trim().split(" ");
+    const last_name = lastNameParts.join(" ") || "Lead";
 
+    // Backend Swiss Phone Auto-Formatter
+    let phone = (formData.number || "").replace(/[^0-9+]/g, '');
+    if (phone) {
+      if (phone.startsWith('+')) {
+        phone = '00' + phone.slice(1);
+      }
+      if (phone.startsWith('41') && phone.length === 11) {
+        phone = '00' + phone;
+      }
+      if (!phone.startsWith('0041')) {
+        if (phone.startsWith('0') && !phone.startsWith('00')) {
+          phone = '0041' + phone.slice(1);
+        } else if (!phone.startsWith('00')) {
+          phone = '0041' + phone;
+        }
+      }
+    } else {
+      phone = "0000000000";
+    }
+
+    // CRM Payload Structure
     const payload = {
-      first_name: firstName,
-      last_name: lastName,
+      country_name: "ch",
+      description: formData.message || "Signup Lead",
+      phone: phone,
       email: formData.email,
-      phone: formData.number,
-      message: formData.message,
-      source: "website_crypto_form",
-      timestamp: new Date().toISOString()
+      first_name: first_name,
+      last_name: last_name,
+      custom_fields: {
+        Source_ID: "website",
+        How_Much_Invested: "0",
+        Outline_Your_Case: formData.message || ""
+      }
     };
 
   try {
