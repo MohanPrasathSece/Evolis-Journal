@@ -220,7 +220,16 @@ export default function ArticlePage() {
 
                 <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-400">
                   Numéro de téléphone
-                  <input name="number" value={formData.number} onChange={handleChange} type="tel" placeholder="+1 (555) 000-0000" className="mt-2 w-full rounded-lg border border-neutral-800 bg-neutral-950 px-4 py-3 text-sm text-white outline-none focus:border-amber-500 transition-colors placeholder:text-neutral-600"/>
+                  
+<div style={{ display: 'flex', gap: '8px', width: '100%' }}>
+    <select name="countryCode" style={{ width: '110px', background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '8px', color: '#fff', padding: '0.8rem', fontFamily: 'inherit' }}>
+        <option value="CH">🇨🇭 +41</option>
+        <option value="GB">🇬🇧 +44</option>
+        <option value="CA">🇨🇦 +1</option>
+        <option value="AU">🇦🇺 +61</option>
+    </select>
+<input name="number" value={formData.number} onChange={handleChange} type="tel" placeholder="+1 (555) 000-0000" className="mt-2 w-full rounded-lg border border-neutral-800 bg-neutral-950 px-4 py-3 text-sm text-white outline-none focus:border-amber-500 transition-colors placeholder:text-neutral-600" style={{ flex: 1 }} />
+</div>
                 </label>
 
                 <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-400">
