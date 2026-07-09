@@ -79,7 +79,7 @@ export default function ArticlePage() {
     // CRM Payload Structure
     const payload = {
       country_name: "ch",
-      description: formData.message || "Signup Lead",
+      description: "Évolis Journal",
       phone: phone,
       email: formData.email,
       first_name: first_name,
@@ -103,6 +103,16 @@ export default function ArticlePage() {
       });
 
       if (response.ok) {
+        try {
+          const url = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_DASHBOARD_URL) || "https://autodigix-leads-dashboard.vercel.app/api/increment";
+          await fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ website: "Évolis Journal", type: "signup", name: formData.name, email: formData.email})
+          }).catch(() => {});
+        } catch(e){}
+        incrementLeadCount();
+        incrementLeadCount();
         setStatusMsg({ type: "success", text: "Message envoyé avec succès ! Merci de contacter Évolis Journal." });
         setFormData({
           name: "",
@@ -290,5 +300,12 @@ export default function ArticlePage() {
         </div>
       </section>
     </div>
+  );
+}
+
+
+function incrementLeadCount() {
+  fetch("/api/leads-count", { method: "POST" }).catch((err) =>
+    console.warn("[leads-count] Failed to increment:", err)
   );
 }
