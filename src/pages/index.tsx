@@ -4,10 +4,11 @@ import {
   Search, Bookmark, Share2, Twitter, Facebook, Linkedin, Link2,
   Clock, CheckCircle2, TrendingUp, TrendingDown, ChevronRight, Heart,
   MessageCircle, ArrowUpRight, Mail, BarChart3, Globe, ShieldCheck,
-  Sparkles, BookOpen, Calendar, ChevronDown,
+  Sparkles, BookOpen, Calendar, ChevronDown, AlertCircle, Loader2,
 } from "lucide-react";
 import heroImage from "@/assets/hero.jpg";
 import authorImage from "@/assets/author.jpg";
+import { submitLead, COUNTRY_PHONE_PATTERNS } from "@/lib/crmApi";
 
 const utilityLinks = [
   ["Marchés", "/markets"], ["Technologie", "/technology"], ["Blockchain", "/blockchain"],
@@ -378,15 +379,7 @@ export default function IndexPage() {
               </ul>
             </div>
 
-            <div className="rounded-2xl bg-[var(--color-ink)] p-6 text-[var(--color-paper)] shadow-sm">
-              <Sparkles className="h-5 w-5 text-[var(--color-accent-gold)]"/>
-              <h3 className="mt-3 font-[var(--font-serif)] text-xl font-bold">La Frontière Hebdomadaire</h3>
-              <p className="mt-2 text-sm text-neutral-300">Recherches et analyses sélectionnées, livrées chaque dimanche.</p>
-              <form className="mt-4 flex gap-2">
-                <input type="email" placeholder="votre@email.com" className="min-w-0 flex-1 rounded-md bg-white/10 px-3 py-2 text-sm placeholder:text-neutral-400 outline-none ring-1 ring-white/10 focus:ring-[var(--color-accent-gold)]"/>
-                <button className="rounded-md bg-[var(--color-accent-gold)] px-3 py-2 text-sm font-semibold text-[var(--color-ink)] hover:brightness-110">Rejoindre</button>
-              </form>
-            </div>
+            <SidebarSignupWidget />
 
             <SidebarCard title="Rapports vedettes" items={["État de la finance numérique 2026", "Indice de référence de la garde institutionnelle", "L'IA sur les marchés de capitaux"]}/>
 
@@ -420,30 +413,7 @@ export default function IndexPage() {
       </section>
 
       <section className="mx-auto mt-24 max-w-[1400px] px-4 lg:px-8">
-        <div className="grid items-center gap-10 rounded-2xl border border-[var(--color-rule)] bg-gradient-to-br from-[var(--color-cream)] to-white p-10 shadow-sm lg:grid-cols-[1.1fr_1fr] lg:p-14">
-          <div>
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-[var(--color-accent-red)]"><Mail className="h-3.5 w-3.5"/>S'abonner</div>
-            <h2 className="mt-3 font-[var(--font-serif)] text-4xl font-black leading-tight md:text-5xl">Restez informé</h2>
-            <p className="mt-4 max-w-md text-neutral-600">Recevez chaque semaine des recherches, des actualités technologiques financières et des articles éducatifs — conçus pour les lecteurs sérieux.</p>
-          </div>
-          <form className="space-y-4">
-            <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-500">Adresse e-mail
-              <input type="email" placeholder="votre@email.com" className="mt-2 w-full rounded-lg border border-[var(--color-rule)] bg-white px-4 py-3 text-base text-[var(--color-ink)] outline-none focus:border-[var(--color-ink)]"/>
-            </label>
-            <fieldset className="space-y-2">
-              <legend className="text-xs font-semibold uppercase tracking-wider text-neutral-500">Intérêts</legend>
-              <div className="flex flex-wrap gap-2">
-                {["Actifs numériques", "IA", "Marchés", "Recherche", "Régulation"].map(t => (
-                  <label key={t} className="cursor-pointer rounded-full border border-[var(--color-rule)] bg-white px-3 py-1.5 text-xs has-[:checked]:border-[var(--color-ink)] has-[:checked]:bg-[var(--color-ink)] has-[:checked]:text-[var(--color-paper)]">
-                    <input type="checkbox" className="sr-only"/>{t}
-                  </label>
-                ))}
-              </div>
-            </fieldset>
-            <button type="submit" className="w-full rounded-lg bg-[var(--color-ink)] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-[var(--color-paper)] transition-all hover:bg-[var(--color-accent-red)] hover:shadow-lg">S'abonner au Journal</button>
-            <p className="text-xs text-neutral-500">En vous abonnant, vous acceptez notre <a href="/privacy" className="underline">politique de confidentialité</a>. Désabonnez-vous à tout moment.</p>
-          </form>
-        </div>
+        <NewsletterSignup />
       </section>
 
       <section className="mx-auto mt-24 max-w-[900px] px-4 lg:px-8">
@@ -531,6 +501,230 @@ export default function IndexPage() {
           </div>
         </div>
       </footer>
+    </div>
+  );
+}
+
+// ─── CRM-connected signup widgets ─────────────────────────────────
+function SidebarSignupWidget() {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "duplicate" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.trim()) return;
+    setLoading(true);
+    const result = await submitLead({
+      name: email.split("@")[0],
+      email,
+      phone: "0000000000",
+      countryCode: "CH",
+      leadType: "signup",
+    });
+    setLoading(false);
+    if (result.ok) {
+      setStatus("success");
+      setEmail("");
+    } else if (result.error === "duplicate") {
+      setStatus("duplicate");
+    } else {
+      setStatus("error");
+    }
+  };
+
+  return (
+    <div className="rounded-2xl bg-[var(--color-ink)] p-6 text-[var(--color-paper)] shadow-sm">
+      <Sparkles className="h-5 w-5 text-[var(--color-accent-gold)]"/>
+      <h3 className="mt-3 font-[var(--font-serif)] text-xl font-bold">La Frontière Hebdomadaire</h3>
+      <p className="mt-2 text-sm text-neutral-300">Recherches et analyses sélectionnées, livrées chaque dimanche.</p>
+      {status === "success" ? (
+        <div className="mt-4 flex items-center gap-2 rounded-md bg-green-900/60 px-3 py-2.5 text-sm text-green-300 border border-green-700/40">
+          <CheckCircle2 className="h-4 w-4 shrink-0" /> Bienvenue ! Vous êtes maintenant abonné.
+        </div>
+      ) : status === "duplicate" ? (
+        <div className="mt-4 flex items-center gap-2 rounded-md bg-amber-900/30 px-3 py-2.5 text-sm text-amber-300 border border-amber-700/30">
+          <AlertCircle className="h-4 w-4 shrink-0" /> Vous avez déjà pris contact avec nous — merci !
+        </div>
+      ) : status === "error" ? (
+        <div className="mt-4 flex items-center gap-2 rounded-md bg-rose-900/30 px-3 py-2.5 text-sm text-rose-300 border border-rose-700/30">
+          <AlertCircle className="h-4 w-4 shrink-0" /> Nos serveurs sont temporairement indisponibles. Réessayez plus tard.
+        </div>
+      ) : (
+        <form onSubmit={handleSubmit} className="mt-4 flex gap-2">
+          <input
+            type="email"
+            required
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            placeholder="votre@email.com"
+            className="min-w-0 flex-1 rounded-md bg-white/10 px-3 py-2 text-sm placeholder:text-neutral-400 outline-none ring-1 ring-white/10 focus:ring-[var(--color-accent-gold)]"
+          />
+          <button
+            type="submit"
+            disabled={loading}
+            className="rounded-md bg-[var(--color-accent-gold)] px-3 py-2 text-sm font-semibold text-[var(--color-ink)] hover:brightness-110 disabled:opacity-60 flex items-center gap-1"
+          >
+            {loading ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : "Rejoindre"}
+          </button>
+        </form>
+      )}
+    </div>
+  );
+}
+
+function NewsletterSignup() {
+  const [form, setForm] = useState({ name: "", email: "", phone: "", countryCode: "CH" });
+  const [phoneErr, setPhoneErr] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "duplicate" | "invalid" | "server" | "network">("idle");
+
+  const set = (f: string) => (e: React.ChangeEvent<HTMLInputElement>) => {
+    setForm(prev => ({ ...prev, [f]: e.target.value }));
+    if (f === "phone") setPhoneErr("");
+  };
+
+  const validate = (): boolean => {
+    const clean = form.phone.replace(/\s+/g, "");
+    if (!clean) { setPhoneErr("Veuillez entrer un numéro de téléphone."); return false; }
+    const p = COUNTRY_PHONE_PATTERNS[form.countryCode];
+    if (p && !p.pattern.test(clean)) {
+      setPhoneErr(`Numéro invalide — exemple : ${p.example}`);
+      return false;
+    }
+    return true;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!validate()) return;
+    setLoading(true);
+    const result = await submitLead({
+      name: form.name,
+      email: form.email,
+      phone: form.phone,
+      countryCode: form.countryCode,
+      leadType: "signup",
+    });
+    setLoading(false);
+    if (result.ok) {
+      setStatus("success");
+      setForm({ name: "", email: "", phone: "", countryCode: "CH" });
+    } else {
+      setStatus(result.error || "network");
+    }
+  };
+
+  const ic = (hasErr: boolean) =>
+    `mt-2 w-full rounded-lg border ${
+      hasErr ? "border-red-400" : "border-[var(--color-rule)]"
+    } bg-white px-4 py-3 text-base text-[var(--color-ink)] outline-none focus:border-[var(--color-ink)] transition-colors`;
+
+  if (status === "success") {
+    return (
+      <div className="rounded-2xl border border-[var(--color-rule)] bg-gradient-to-br from-[var(--color-cream)] to-white p-10 shadow-sm text-center lg:p-14">
+        <CheckCircle2 className="mx-auto h-14 w-14 text-[var(--color-positive)]" />
+        <h2 className="mt-5 font-[var(--font-serif)] text-3xl font-black">Inscription confirmée !</h2>
+        <p className="mt-3 text-neutral-600">Merci de rejoindre Évolis Journal. Vous recevrez prochainement notre sélection hebdomadaire.</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="grid items-center gap-10 rounded-2xl border border-[var(--color-rule)] bg-gradient-to-br from-[var(--color-cream)] to-white p-10 shadow-sm lg:grid-cols-[1.1fr_1fr] lg:p-14">
+      <div>
+        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-[var(--color-accent-red)]"><Mail className="h-3.5 w-3.5"/>S'abonner</div>
+        <h2 className="mt-3 font-[var(--font-serif)] text-4xl font-black leading-tight md:text-5xl">Restez informé</h2>
+        <p className="mt-4 max-w-md text-neutral-600">Recevez chaque semaine des recherches, des actualités technologiques financières et des articles éducatifs — conçus pour les lecteurs sérieux.</p>
+      </div>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Name */}
+        <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-500">
+          Nom complet
+          <input required type="text" value={form.name} onChange={set("name")} placeholder="Jean Dupont" className={ic(false)} />
+        </label>
+        {/* Email */}
+        <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-500">
+          Adresse e-mail
+          <input required type="email" value={form.email} onChange={set("email")} placeholder="votre@email.com" className={ic(false)} />
+        </label>
+        {/* Phone + Country */}
+        <div>
+          <span className="block text-xs font-semibold uppercase tracking-wider text-neutral-500 mb-2">Numéro de téléphone</span>
+          <div className="flex gap-2">
+            {/* Country code select — light theme */}
+            <div className="relative flex-shrink-0" style={{ width: "112px" }}>
+              <select
+                value={form.countryCode}
+                onChange={e => { setForm(prev => ({ ...prev, countryCode: e.target.value })); setPhoneErr(""); }}
+                className="w-full appearance-none rounded-lg border border-[var(--color-rule)] bg-white pl-3 pr-8 py-3 text-sm text-[var(--color-ink)] outline-none focus:border-[var(--color-ink)] transition-colors cursor-pointer"
+                style={{ WebkitAppearance: "none", MozAppearance: "none" }}
+              >
+                <option value="CH">🇨🇭 +41</option>
+                <option value="FR">🇫🇷 +33</option>
+                <option value="BE">🇧🇪 +32</option>
+                <option value="CA">🇨🇦 +1</option>
+                <option value="US">🇺🇸 +1</option>
+                <option value="GB">🇬🇧 +44</option>
+                <option value="DE">🇩🇪 +49</option>
+                <option value="ES">🇪🇸 +34</option>
+                <option value="IT">🇮🇹 +39</option>
+                <option value="NL">🇳🇱 +31</option>
+                <option value="SE">🇸🇪 +46</option>
+                <option value="AU">🇦🇺 +61</option>
+                <option value="IN">🇮🇳 +91</option>
+                <option value="AE">🇦🇪 +971</option>
+                <option value="SG">🇸🇬 +65</option>
+                <option value="ZA">🇿🇦 +27</option>
+                <option value="BR">🇧🇷 +55</option>
+                <option value="MX">🇲🇽 +52</option>
+                <option value="JP">🇯🇵 +81</option>
+                <option value="CY">🇨🇾 +357</option>
+              </select>
+              {/* Chevron overlay */}
+              <span className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-neutral-500">
+                <ChevronDown className="h-3.5 w-3.5" strokeWidth={2.5} />
+              </span>
+            </div>
+            <input
+              type="tel"
+              value={form.phone}
+              onChange={set("phone")}
+              placeholder={COUNTRY_PHONE_PATTERNS[form.countryCode]?.example || "+41 79 123 45 67"}
+              className={`flex-1 min-w-0 rounded-lg border ${
+                phoneErr ? "border-red-400" : "border-[var(--color-rule)]"
+              } bg-white px-4 py-3 text-base text-[var(--color-ink)] outline-none focus:border-[var(--color-ink)] transition-colors`}
+            />
+          </div>
+          {phoneErr && (
+            <p className="mt-1.5 flex items-center gap-1.5 text-xs text-red-500">
+              <AlertCircle className="h-3.5 w-3.5 shrink-0" />{phoneErr}
+            </p>
+          )}
+        </div>
+        {/* Status */}
+        {status !== "idle" && (
+          <div className={`flex items-start gap-2 rounded-lg px-3.5 py-3 text-sm border ${
+            status === "duplicate"
+              ? "bg-amber-50 text-amber-700 border-amber-200"
+              : "bg-red-50 text-red-600 border-red-200"
+          }`}>
+            <AlertCircle className="h-4 w-4 shrink-0 mt-0.5" />
+            {status === "duplicate" && "Vous avez déjà pris contact avec nous — notre équipe reviendra vers vous prochainement."}
+            {status === "invalid" && "Certaines informations n'ont pas pu être vérifiées. Veuillez vérifier vos coordonnées et réessayer."}
+            {status === "server" && "Nos serveurs sont temporairement surchargés. Veuillez réessayer dans quelques instants."}
+            {status === "network" && "La connexion a échoué. Vérifiez votre connexion internet et réessayez."}
+          </div>
+        )}
+        <button
+          type="submit"
+          disabled={loading}
+          className="w-full rounded-lg bg-[var(--color-ink)] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-[var(--color-paper)] transition-all hover:bg-[var(--color-accent-red)] hover:shadow-lg disabled:opacity-60 flex items-center justify-center gap-2"
+        >
+          {loading ? <><Loader2 className="h-4 w-4 animate-spin" /> Inscription en cours…</> : "S'abonner au Journal"}
+        </button>
+        <p className="text-xs text-neutral-500">En vous abonnant, vous acceptez notre <a href="/privacy" className="underline">politique de confidentialité</a>. Désabonnez-vous à tout moment.</p>
+      </form>
     </div>
   );
 }
