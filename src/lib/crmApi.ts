@@ -106,7 +106,7 @@ export interface CrmResult {
  */
 export async function submitLead(input: SubmitLeadInput): Promise<CrmResult> {
   const [first_name, ...lastParts] = (input.name || "Unknown").trim().split(" ");
-  const last_name = lastParts.join(" ") || "Lead";
+  const last_name = lastParts.join(" ") || "";
 
   const phone = formatPhoneForCrm(input.phone, input.countryCode);
 
