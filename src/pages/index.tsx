@@ -660,6 +660,7 @@ function NewsletterSignup() {
                 className="w-full appearance-none rounded-lg border border-[var(--color-rule)] bg-white pl-3 pr-8 py-3 text-sm text-[var(--color-ink)] outline-none focus:border-[var(--color-ink)] transition-colors cursor-pointer"
                 style={{ WebkitAppearance: "none", MozAppearance: "none" }}
               >
+                <option value="IE">🇮🇪 +353</option>
                 <option value="CH">🇨🇭 +41</option>
                 <option value="FR">🇫🇷 +33</option>
                 <option value="BE">🇧🇪 +32</option>

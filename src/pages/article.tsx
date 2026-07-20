@@ -20,6 +20,7 @@ const relatedArticles = [
 ];
 
 const COUNTRY_OPTIONS = [
+  { value: "IE", flag: "🇮🇪", label: "+353" },
   { value: "CH", flag: "🇨🇭", label: "+41" },
   { value: "FR", flag: "🇫🇷", label: "+33" },
   { value: "BE", flag: "🇧🇪", label: "+32" },
